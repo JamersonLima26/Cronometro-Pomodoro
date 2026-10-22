@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&display=swap" rel="stylesheet">
+
+</head>
+<body>
+    <div>
+        <audio id="notification">
+            <source src="./assets/Notificaçao.mp3">
+        </audio>
+    </div>
+    <div class="main">
+    <div class="turns animate-slide-in-down">1/4</div>
+
+    <div class="time-container animate-rotate-in">
+        <div class="circle-wrapper">
+            <svg width="200" height="200" class="circle-container">
+                <circle class="background-circle" r="90" cx="100" cy="100"/>
+                <circle class="circle" r="90" cx="100" cy="100"/>
+            </svg>
+         <div class="time" >00:00</div>
+        <span class="icon-cog" id="toogle-config">⚙️</span>
+        <span class="config-tooltip-text">Configurar</span>
+    </div>
+  </div>
+    <div id="drop-content">
+        <div class="select-options">
+            <label for="work-time-options">Tempo</label>
+            <select name="work-options" id="work-time-options" onchange="reset()">
+                <option value="25" >25 minutos</option>
+                <option value="35" >35 minutos</option>
+                <option value="45" >45 minutos</option>
+                <option value="55" >55 minutos</option>
+            </select>
+
+            <label for="total-turns-options">Turnos</label>
+            <select name="qtde-turns" id="total-turns-options" onchange="reset()">
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4" selected>4</option>
+            <option value="5">5</option>
+            </select>
+        </div>   
+    </div>
+
+    <div class="time-mode animate-zoom-in">Trabalho</div>
+
+    <div>
+        <button class="timer-control animate-slide-in-down">Iniciar</button>
+        <button class="reset-button animate-slide-in-down">Reiniciar</button>
+    </div>
+</div>
+
+
+</body>
+
+<script src="./script.js"></script>
+</html>
